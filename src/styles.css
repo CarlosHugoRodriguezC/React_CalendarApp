@@ -1,0 +1,90 @@
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.calendar-screen {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.rbc-calendar {
+  min-height: 100vh;
+}
+
+.fab {
+  position: fixed;
+  border-radius: 25px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+  display: flex;
+  gap: 10px;
+  padding: 0.5em;
+  max-width: 2.5em;
+  max-height: 2.5em;
+  overflow: hidden;
+  align-items: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.fab .text {
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.fab:hover {
+  max-width: 100%;
+  z-index: 10;
+  border-radius: 25px;
+}
+
+.fab:hover .text {
+  opacity: 1;
+}
+
+.fab-danger {
+  position: fixed;
+  border-radius: 25px;
+  bottom: 70px;
+  right: 20px;
+  z-index: 9;
+  display: flex;
+  gap: 10px;
+  padding: 0.5em;
+  max-width: 2.5em;
+  max-height: 2.5em;
+  overflow: hidden;
+  align-items: center;
+  transition: all 0.7s ease-in-out;
+}
+
+.fab-danger .text {
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.fab-danger:hover {
+  max-width: 100%;
+  border-radius: 25px;
+  z-index: 10;
+}
+
+.fab-danger:hover .text {
+  opacity: 1;
+}
+
+.slide-in-from-right {
+  animation: 0.8s ease-out 0s 1 slideInFromRight forwards;
+}
